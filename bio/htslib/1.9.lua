@@ -8,7 +8,39 @@ whatis("Description: htslib and bcftools")
 
 local htslib_image = "/cbio/images/bionic-htslib1.9.simg"
 
-tools = {'bcftools', 'bgzip', 'color-chrs.pl', 'guess-ploidy.py', 'htsfile', 'plot-roh.py', 'plot-vcfstats', 'run-roh.pl', 'tabix', 'vcfutils.pl'}
+tools = {
+  'ace2sam',
+  'bcftools',
+  'bgzip',
+  'blast2sam.pl',
+  'bowtie2sam.pl',
+  'color-chrs.pl',
+  'export2sam.pl',
+  'guess-ploidy.py',
+  'htsfile',
+  'interpolate_sam.pl',
+  'maq2sam-long',
+  'maq2sam-short',
+  'md5fa',
+  'md5sum-lite',
+  'novo2sam.pl',
+  'plot-bamstats',
+  'plot-roh.py',
+  'plot-vcfstats',
+  'psl2sam.pl',
+  'run-roh.pl',
+  'sam2vcf.pl',
+  'samtools',
+  'samtools.pl',
+  'seq_cache_populate.pl',
+  'soap2sam.pl',
+  'tabix',
+  'varfilter.py',
+  'vcfutils.pl',
+  'wgsim',
+  'wgsim_eval.pl',
+  'zoom2sam.pl',
+}
 
 for i, tool in ipairs(tools) do
   set_alias(tool, "singularity run --app " .. tool .. " " .. htslib_image )
