@@ -1,10 +1,10 @@
 -- -*- lua -*-
 help([[
-This module configures htslib and bcftool 1.9
+This module configures htslib, bcftools and samtools 1.9
 ]])
 whatis("Version: 1.9")
-whatis("Keywords: htslib, bcftools")
-whatis("Description: htslib and bcftools")
+whatis("Keywords: htslib, bcftools, samtools")
+whatis("Description: htslib, bcftools and samtools")
 
 local htslib_image = "/cbio/images/bionic-htslib1.9.simg"
 
