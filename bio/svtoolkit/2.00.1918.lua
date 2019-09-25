@@ -20,3 +20,13 @@ end
  
 setenv(       "SV_DIR", base)
 prepend_path( "LD_LIBRARY_PATH", pathJoin(base, "lib"))
+
+jars = {
+  pathJoin(base, "/lib/SVToolkit.jar"),
+  pathJoin(base, "/lib/gatk/GenomeAnalysisTK.jar"),
+  pathJoin(base, "/lib/gatk/Queue.jar"),
+}
+
+for i, jar in ipairs(jars) do
+  prepend_path( "classpath", jar)
+end
