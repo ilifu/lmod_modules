@@ -12,7 +12,7 @@ whatis("Description: Genome STRiP (Genome STRucture In Populations) is a suite o
 
 local base = "/cbio/soft/genome-strip/svtoolkit-2.00.1918"
 
-dependencies = {"jdk/11.0.2", "slurm-drmaa/1.1.0", "bio/htslib/1.9", "R/3.6.1"}
+dependencies = {"jdk/1.8.0_211", "slurm-drmaa/1.1.0", "bio/htslib/1.9", "R/3.6.1"}
 
 for i, dependency in ipairs(dependencies) do
   load(dependency)
