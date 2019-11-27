@@ -42,6 +42,8 @@ tools = {
   'zoom2sam.pl',
 }
 
-for i, tool in ipairs(tools) do
-  set_alias(tool, "singularity run --app " .. tool .. " " .. htslib_image )
-end
+-- for i, tool in ipairs(tools) do
+--   set_alias(tool, "singularity run --app " .. tool .. " " .. htslib_image )
+-- end
+
+prepend_path("PATH", "/cbio/soft/htslib/1.9")

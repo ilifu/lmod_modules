@@ -6,7 +6,7 @@ whatis("Version: 3.6.1")
 whatis("Keywords: R, RStudio, Rscript")
 whatis("Description: R statistics package")
 
-local singularity_image = "/cbio/images/bionic-R3.6.1-RStudio1.2.1335-bio.simg"
+-- local singularity_image = "/cbio/images/bionic-R3.6.1-RStudio1.2.1335-bio.simg"
 
 setenv ("R_INSTALL_STAGED" ,"false")
 
@@ -16,6 +16,9 @@ apps = {
   "rserver",
 }
 
-for i, app in ipairs(apps) do
-  set_alias(app, "singularity run --app " .. app .. " " .. singularity_image)
-end
+-- for i, app in ipairs(apps) do
+--   set_alias(app, "singularity run --app " .. app .. " " .. singularity_image)
+-- end
+
+prepend_path('PATH', '/cbio/soft/R/3.6.1')
+
